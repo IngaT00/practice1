@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_parquet('green_tripdata_2021-02.parquet')
+df=pd.read_parquet('../HW1/green_tripdata_2021-01.parquet')
 df=df[["fare_amount","trip_distance","payment_type", "tip_amount"]]
 df=df.dropna()
 df=df[df["payment_type"].isin([1,2])]
@@ -18,4 +18,3 @@ print("Accuracy for version 1: ",accuracy)
 
 import joblib
 joblib.dump(model, "model_v1.pkl")
-print("Model v1 saved")
