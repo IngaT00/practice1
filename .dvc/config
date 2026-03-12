@@ -1,4 +1,6 @@
 [core]
-    remote = myremote
+    remote = storage
 ['remote "myremote"']
     url = ../S3
+['remote "storage"']
+    url = ../DVC_storage
